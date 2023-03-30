@@ -85,19 +85,8 @@ No regresa ningún valor.
 template <typename matriz>
 void ImprimirSolucion(matriz & miMatriz)
 {
-    int numVars = miMatriz[0].size() - 1;
 
-    for (int i = numVars - 1; i >= 0; i--)
-    {
-        cout << "x" << i + 1 << " = ";
-        float val = miMatriz[i][numVars];
-        for (int j = i + 1; j < numVars; j++)
-        {
-            val -= miMatriz[i][j] * miMatriz[j][numVars];
-        }
-        val /= miMatriz[i][i];
-        cout << val << endl;
-    }
+    cout << "La solucion del sistema es \n" << "X1 = " << miMatriz[0][3] <<"\n X2 = " << miMatriz[1][3] << "\n X3 = " << miMatriz[2][3];
 }
 
 
